@@ -9,36 +9,37 @@ class Car(object):
 
 	speed = 0
 
-	def __init__(self,name_of_vehicle = 'General',model = 'GM',type = 'saloon'):
-
+	def __init__(self,name = 'General',model = 'GM',type = 'saloon'):
 		self.type = type
 		self.model = model
-		self.name_of_vehicle = name_of_vehicle
+		self.name = name
 
 
 	@property
 	def num_of_doors(self):
-
-		if self.name_of_vehicle == 'Porshe' or self.name_of_vehicle == 'Koenigsegg':
+		if self.name == 'Porshe' or self.name == 'Koenigsegg':
 			return 2
 		else: 
 			return 4
+		
 	def num_of_wheels(self):
 		if self.type == 'trailer':
 			return 8
 		else:
 			return 4
+		
 	def is_saloon(self):
 		if self.type == 'saloon':
 			return True
 		return False
+	
 	def drive(self, i=None):
 		if i == 3:
 			self.speed = 1000
 		elif i == 7:
 			self.speed = 77
 		else:
-			self.speed = 72
+			self.speed = 100
 		return self
 
 class CarClassTest(unittest.TestCase):
