@@ -33,7 +33,7 @@ class Sedan(Car):
 
 
 """ Polymorphism is implemented below """
-cars = [Sedan('Lexus'), Sedan('Shelby'), Motorcycle('Suzuki'),Motorcycle('Yamaha')]
+cars = [Sedan('Lexus'), Sedan('Shelby'), Motorcycle('Suzuki'), Motorcycle('Yamaha')]
 for car in cars:
     print car.name + ': ' + car.drive()
 
